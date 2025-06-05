@@ -1,0 +1,209 @@
+/* General Dashboard Layout */
+.admin-dashboard {
+  padding: 20px;
+  background-color: #f4f7fa;
+  font-family: 'Arial', sans-serif;
+}
+
+h2, h3 {
+  color: #333;
+  font-weight: 700;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.product-form {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.product-form input, .product-form textarea, .product-form button {
+  display: block;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.product-form input:focus, .product-form textarea:focus {
+  border-color: #b8a91d;
+  box-shadow: 0 0 5px rgba(29, 114, 184, 0.5);
+}
+
+.product-form button {
+  background-color: rgb(0, 255, 149);
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-form button:hover {
+  background-color: #155a8a;
+  transform: scale(1.05);
+}
+
+/* Advanced Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+table th, table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+table th {
+  background-color: #f9fafb;
+  font-weight: 700;
+}
+
+table td {
+  position: relative;
+}
+
+table tr:hover {
+  background-color: #f1f5f9;
+}
+
+table img {
+  max-width: 80px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+table img:hover {
+  transform: scale(1.1);
+}
+
+/* Dynamic row highlighting */
+table tr.active-row {
+  background-color: #e2f7ff;
+  font-weight: bold;
+}
+
+table tr:active {
+  background-color: #d1ecf1;
+}
+
+/* Floating Action Buttons (For Edit/Delete) */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button.action {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button.edit {
+  color: #ffc107;
+}
+
+button.delete {
+  color: #dc3545;
+}
+
+button.action:hover {
+  transform: scale(1.2);
+}
+
+/* Error and Success Message Styling */
+.error-message {
+  background-color: #ffdddd;
+  color: #d8000c;
+  padding: 10px;
+  border: 1px solid #d8000c;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.success-message {
+  background-color: #ddffdd;
+  color: #4caf50;
+  padding: 10px;
+  border: 1px solid #4caf50;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 10px;
+  }
+
+  .product-form input, .product-form textarea, .product-form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  table th, table td {
+    padding: 10px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Advanced Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.admin-dashboard h2, h3 {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.product-form, table {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Tooltip for Delete and Edit */
+button.action:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+button.action:hover::after {
+  opacity: 1;
+}

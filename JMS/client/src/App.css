@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blanchedalmond;
+  font-size: 16px; /* Base font size */
+}
+
+.container {
+  padding: 10px;
+  max-width: 700px;
+  margin: 50px auto;
+}
+
+.btn {
+  border: none;
+  padding: 7px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.btn-add {
+  background: #194064;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.addContainer {
+  position: fixed;
+  background-color: rgba(247, 38, 135, 0.685);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addContainer form {
+  width: 420px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.addContainer form label {
+  font-size: 18px;
+}
+
+.addContainer form input {
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addContainer form input::placeholder {
+  color: #aaa; /* Placeholder text color */
+}
+
+.addContainer form button {
+  background-color: #194064;
+  color: white;
+  font-weight: 550;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.addContainer form .close-btn {
+  margin-left: auto;
+  font-size: 18px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.tableContainer {
+  margin-top: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableContainer table thead tr {
+  background-color: #f0eaea;
+}
+
+.tableContainer table thead tr th,
+.tableContainer table tbody tr td {
+  min-width: 100px;
+  padding: 7px;
+  text-align: center;
+  border-bottom: 1px solid #c9c5c2;
+}
+
+.tableContainer table tbody tr {
+  border: 1px solid #c9c5c2;
+  transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+.tableContainer table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Highlight on hover */
+}
+
+.btn-edit,
+.btn-delete {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: 0px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+  background-color: cadetblue;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #2f8e8e;
+}
+
+.btn-delete {
+  background-color: red;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: darkred;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* Smaller font size on mobile */
+  }
+
+  .container {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .addContainer form {
+    width: 100%;
+  }
+
+  .tableContainer {
+    overflow-x: auto;
+  }
+
+  .tableContainer table {
+    width: 100%;
+  }
+}

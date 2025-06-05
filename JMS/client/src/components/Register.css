@@ -1,0 +1,93 @@
+/* Container for registration form */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e09, #d0e);
+  padding: 20px;
+}
+
+/* Registration form styles */
+.register-form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styles */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input field styling */
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  outline: none;
+}
+
+/* Register button styling */
+.register-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #218838;
+}
+
+/* Error and success messages */
+.error-message, .success-message {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}

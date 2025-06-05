@@ -1,0 +1,59 @@
+.Aboutus {
+  background-image: url('./img/aimg1.jpg'); 
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  min-height: 100vh; /* Make sure it takes the full height of the viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(241, 241, 241, 0.9); /* Slightly transparent to see background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-us-heading {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Cursive', serif;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.about-us-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-us-image {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.jewelry-image {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.about-us-text {
+  flex: 2;
+  padding: 20px;
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+.about-us-text p {
+  margin-bottom: 20px;
+}
